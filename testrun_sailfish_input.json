@@ -1,0 +1,9 @@
+{
+    "sailfish_quant.index_archive": "/Users/otto/Documents/RNASeq/sailfish-docker/test/PE/sailfish_gencode_k31.tgz",
+    "sailfish_quant.ncpu": 7,
+    "sailfish_quant.lib_type": "ISR",
+    "sailfish_quant.reads_1": ["/Users/otto/Documents/RNASeq/sailfish-docker/test/PE/ENCSR142YZV_rep1_1_star_genome_correct_sort_chr19only_R1.fastq"],
+    "sailfish_quant.reads_2": ["/Users/otto/Documents/RNASeq/sailfish-docker/test/PE/ENCSR142YZV_rep1_1_star_genome_correct_sort_chr19only_R2.fastq"],
+    "sailfish_quant.out_dir": "ISR_out_test",
+    "sailfish_quant.memGB": 14
+}
