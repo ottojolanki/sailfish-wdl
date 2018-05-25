@@ -59,7 +59,7 @@ workflow sailfish_quant{
         }
 
         runtime {
-            docker: "quay.io/encode-dcc/sailfish"
+            docker: "quay.io/encode-dcc/sailfish:latest"
             cpu: select_first([ncpu,4])
             memory: "${select_first([memGB,8])} GB"
         }        
