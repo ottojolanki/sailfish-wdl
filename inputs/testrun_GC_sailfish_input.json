@@ -1,0 +1,10 @@
+{
+    "sailfish_quant.index_archive": "gs://sailfish-runs/indexes/sailfish_gencode_k31.tgz",
+    "sailfish_quant.ncpu": 4,
+    "sailfish_quant.lib_type": "ISR",
+    "sailfish_quant.reads_1": "gs://sailfish-runs/input-files/ENCSR142YZV-chr19/ENCSR142YZV_rep1_1_star_genome_correct_sort_chr19only_R1.fastq.gz",
+    "sailfish_quant.reads_2": "gs://sailfish-runs/input-files/ENCSR142YZV-chr19/ENCSR142YZV_rep1_1_star_genome_correct_sort_chr19only_R2.fastq.gz",
+    "sailfish_quant.out_dir": "ISR_out",
+    "sailfish_quant.memGB": 16,
+    "sailfish_quant.sailfish_disks": "local-disk 120 HDD"
+}
