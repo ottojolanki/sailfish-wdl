@@ -1,5 +1,6 @@
 {
-    "sailfish_quant.index_archive": "gs://sailfish-runs/indexes/sailfish_gencodeV24_ambion1_k31.tgz",
+    "sailfish_quant.index_archive": "gs://sailfish-runs/indexes/sailfish_gencodeV24_k31_ambion1spikes.tgz",
+    "sailfish_quant.index_archive_dirname": "sailfish_gencodeV24_k31_ambion1spikes",
     "sailfish_quant.ncpu": 8,
     "sailfish_quant.lib_type": "ISR",
     "sailfish_quant.reads_1": "gs://sailfish-runs/input-files/ENCSR000AEC/ENCLB035ZZZ_1/ENCFF001RFH_R1.fastq.gz",

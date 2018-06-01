@@ -1,5 +1,6 @@
 workflow sailfish_quant{
     File index_archive
+    String index_archive_dirname
     String lib_type
     File reads_1
     File reads_2
@@ -19,6 +20,7 @@ workflow sailfish_quant{
     }
     call sailfish { input:
         index_archive = index_archive,
+        index_archive_dirname = index_archive_dirname,
         lib_type = lib_type,
         read_1 = unzip_reads.R1,
         read_2 = unzip_reads.R2,
@@ -35,6 +37,7 @@ workflow sailfish_quant{
 
     task sailfish {
         File index_archive
+        String index_archive_dirname
         String lib_type
         File read_1
         File read_2
@@ -49,7 +52,7 @@ workflow sailfish_quant{
         command {
             tar -xzvf ${index_archive} 
             sailfish quant \
-                ${"-i " + "sailfish_gencodeV24_k31"} \
+                ${"-i " + index_archive_dirname} \
                 ${"-l " + lib_type} \
                 ${"-p " + ncpu} \
                 -1 ${read_1} \
@@ -79,8 +82,8 @@ workflow sailfish_quant{
         File reads_2
 
         command {
-            pigz -cd ${reads_1} > R1.fastq
-            pigz -cd ${reads_2} > R2.fastq
+            pigz -p 8 -cd ${reads_1} > R1.fastq
+            pigz -p 8 -cd ${reads_2} > R2.fastq
         }
 
         output {
@@ -91,7 +94,7 @@ workflow sailfish_quant{
         runtime {
         docker: "quay.io/encode-dcc/ubuntu_with_pigz:latest"
         cpu: 8
-        memory: "30 GB"
-        disks: "local-disk 200 HDD"
+        memory: "52 GB"
+        disks: "local-disk 200 SSD"
         }
     }
